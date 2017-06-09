@@ -41,7 +41,14 @@ new Models.Airport() { ID = 3, ShortName = "BER", FullName = "Berlin Airport", H
                 new Models.Flight() { ID = 3, FlightNumber = "GHI789", StartAirport = context.Airports.First(o => o.ID == 2), EndAirport = context.Airports.First(o => o.ID == 1), FlightDate = new DateTime(2017, 6, 9, 22, 56, 0) }
                 );
 
-
+                context.Flights.Include("Events").Where(flight => flight.FlightNumber == "ABC123").First().Events.Add(
+                new Models.FlightEvent()
+                {
+                    Type = Models.FlightEventType.FlightStart,
+                    Planned = DateTime.Now.AddDays(1),
+                    DelayTime = DateTime.Now.AddDays(1.1),
+                    BoardingGate = 10
+                });
         }
     }
 }

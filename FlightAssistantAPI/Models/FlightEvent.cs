@@ -37,7 +37,7 @@ namespace FlightAssistantAPI.Models
                 }
             } }
         public int MinutesLeft { get {
-                return (int)Math.Floor((Planned - DateTime.Now).TotalMinutes);
+                return (int)Math.Floor((DelayTime - DateTime.Now).TotalMinutes);
             } }
         public DateTime Planned { get; set; }
 
