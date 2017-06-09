@@ -9,6 +9,7 @@ namespace FlightAssistantAPI.Models
     {
         public int ID { get; set; }
         public string FlightNumber { get; set; }
+        public DateTime FlightDate { get; set; }
         public virtual Airport StartAirport { get; set; }
         public virtual Airport EndAirport { get; set; }
         public virtual List<FlightEvent> Events { get; set; }

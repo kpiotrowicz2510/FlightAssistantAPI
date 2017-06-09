@@ -36,9 +36,9 @@ new Models.Airport() { ID = 3, ShortName = "BER", FullName = "Berlin Airport", H
 
             context.Flights.AddOrUpdate(
                 a=>a.ID,
-                new Models.Flight() {  ID = 1, FlightNumber="ABC123", StartAirport = context.Airports.First(o=>o.ID==1), EndAirport = context.Airports.First(o => o.ID == 2)},
-                new Models.Flight() { ID = 2, FlightNumber = "DEF456", StartAirport = context.Airports.First(o => o.ID == 1), EndAirport = context.Airports.First(o => o.ID == 3) },
-                new Models.Flight() { ID = 3, FlightNumber = "GHI789", StartAirport = context.Airports.First(o => o.ID == 2), EndAirport = context.Airports.First(o => o.ID == 1) }
+                new Models.Flight() {  ID = 1, FlightNumber="ABC123", StartAirport = context.Airports.First(o=>o.ID==1), EndAirport = context.Airports.First(o => o.ID == 2), FlightDate = new DateTime(2017, 8, 10, 12, 30, 0) },
+                new Models.Flight() { ID = 2, FlightNumber = "DEF456", StartAirport = context.Airports.First(o => o.ID == 1), EndAirport = context.Airports.First(o => o.ID == 3), FlightDate = new DateTime(2017, 7, 9, 22, 34, 0) },
+                new Models.Flight() { ID = 3, FlightNumber = "GHI789", StartAirport = context.Airports.First(o => o.ID == 2), EndAirport = context.Airports.First(o => o.ID == 1), FlightDate = new DateTime(2017, 6, 9, 22, 56, 0) }
                 );
 
 
