@@ -192,6 +192,10 @@
     <Compile Include="Migrations\201706091654401_InitialMigration.Designer.cs">
       <DependentUpon>201706091654401_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706091758022_airports.cs" />
+    <Compile Include="Migrations\201706091758022_airports.Designer.cs">
+      <DependentUpon>201706091758022_airports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Airport.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -272,6 +276,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706091654401_InitialMigration.resx">
       <DependentUpon>201706091654401_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706091758022_airports.resx">
+      <DependentUpon>201706091758022_airports.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
