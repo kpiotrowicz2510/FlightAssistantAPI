@@ -12,7 +12,7 @@ namespace FlightAssistantAPI.Models
         public DbSet<Airport> Airports { get; set; }
         public FlightAssistantContext(): base("DefaultConnection")
         {
-
+            this.Configuration.ProxyCreationEnabled = false;
         }
     }
 }

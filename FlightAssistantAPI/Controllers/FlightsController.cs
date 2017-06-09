@@ -17,7 +17,7 @@ namespace FlightAssistantAPI.Controllers
         {
             using (var db = new FlightAssistantContext())
             {
-                var flightData = db.Flights.Where(flight => flight.ID == id).First();
+                var flightData = db.Flights.Include("StartAirport").Include("EndAirport").Include("Events").Where(flight => flight.ID == id).First();
                 if (flightData != null)
                 {
                     return Ok(flightData);
