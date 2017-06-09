@@ -17,7 +17,11 @@ namespace FlightAssistantAPI.Controllers
         {
             using (var db = new FlightAssistantContext())
             {
-               return Ok(db.Flights.Where(flight => flight.ID == id).FirstOrDefault());
+                var flightData = db.Flights.Where(flight => flight.ID == id).First();
+                if (flightData != null)
+                {
+                    return Ok(flightData);
+                }
             }
 
             return NotFound();
