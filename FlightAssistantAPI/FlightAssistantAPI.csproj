@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201706091848370_flightdate.Designer.cs">
       <DependentUpon>201706091848370_flightdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706092005102_flighttype.cs" />
+    <Compile Include="Migrations\201706092005102_flighttype.Designer.cs">
+      <DependentUpon>201706092005102_flighttype.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Airport.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -293,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706091848370_flightdate.resx">
       <DependentUpon>201706091848370_flightdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706092005102_flighttype.resx">
+      <DependentUpon>201706092005102_flighttype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
