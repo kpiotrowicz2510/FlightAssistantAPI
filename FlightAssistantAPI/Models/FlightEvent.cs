@@ -7,7 +7,7 @@ namespace FlightAssistantAPI.Models
 {
     public enum FlightEventType
     {
-        CheckInOnline, CheckInOffline, SecurityCheck, Boarding, FlightStart, FlightEnd
+        CheckInOnline, CheckInOffline, SecurityCheck, Boarding, FlightStart, FlightEnd, LuggageRetrival
     }
     public class FlightEvent
     {
@@ -30,7 +30,8 @@ namespace FlightAssistantAPI.Models
                         return "Take off";
                     case FlightEventType.FlightEnd:
                         return "Landing";
-                    
+                    case FlightEventType.LuggageRetrival:
+                        return "Luggage retrival";
                     default:
                         return "Unknown type";
 
