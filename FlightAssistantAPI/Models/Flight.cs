@@ -11,6 +11,7 @@ namespace FlightAssistantAPI.Models
         public string FlightNumber { get; set; }
         public DateTime FlightDate { get; set; }
 
+        public string Aircraft = "Boeing 737-800";
         public DateTime ServerTime { get { return DateTime.Now; } }
 
         public virtual Airport StartAirport { get; set; }
