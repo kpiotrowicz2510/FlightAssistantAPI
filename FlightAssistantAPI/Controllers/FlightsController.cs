@@ -23,7 +23,7 @@ namespace FlightAssistantAPI.Controllers
                     return Ok(flightData);
                 }
             }
-
+            //nie
             return NotFound();
         }
 
