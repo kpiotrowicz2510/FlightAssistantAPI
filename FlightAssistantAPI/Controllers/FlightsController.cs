@@ -22,9 +22,10 @@ namespace FlightAssistantAPI.Controllers
                 {
                     for(int i = 1; i < flightData.Events.Count-1; i++)
                     {
-                        if (flightData.Events[i-1].IsDone&&flightData.Events[i+1].IsPending)
+                        if (flightData.Events[i-1].IsDone&&flightData.Events[i].IsPending)
                         {
                             flightData.Events[i].IsActive = true;
+                            break;
                         }
                         
                     }
