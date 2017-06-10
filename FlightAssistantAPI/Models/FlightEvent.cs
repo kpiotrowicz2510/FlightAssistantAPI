@@ -5,12 +5,14 @@ using System.Web;
 
 namespace FlightAssistantAPI.Models
 {
-    public enum FlightEventType
+      public enum FlightEventType
     {
         CheckInOnline, CheckInOffline, SecurityCheck, Boarding, FlightStart, FlightEnd, LuggageRetrival
     }
     public class FlightEvent
     {
+        public const string BASE_URL = "http://flightassistant.azurewebsites.net/Content/Images/";
+
         public int ID { get; set; }
         public FlightEventType Type { get; set; }
 
@@ -44,7 +46,28 @@ namespace FlightAssistantAPI.Models
 
         public DateTime DelayTime { get; set; }
 
-        public byte[] MapImage { get; set; }
+        public string MapImage { get {
+                switch (Type)
+                {
+                    case FlightEventType.Boarding:
+                        return BASE_URL + "boarding_map.png";
+                    case FlightEventType.CheckInOnline:
+                        return BASE_URL + "check_in_map.png";
+                    case FlightEventType.CheckInOffline:
+                        return BASE_URL + "check_in_map.png";
+                    case FlightEventType.SecurityCheck:
+                        return BASE_URL + "security_check_map.png";
+                    case FlightEventType.FlightStart:
+                        return "";
+                    case FlightEventType.FlightEnd:
+                        return "";
+                    case FlightEventType.LuggageRetrival:
+                        return BASE_URL + "luggage_retrival_map.png";
+                    default:
+                        return "";
+
+                }
+            } }
 
         public int? BoardingGate { get; set; }
 

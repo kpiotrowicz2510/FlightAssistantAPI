@@ -216,6 +216,10 @@
     <Compile Include="Migrations\201706100011440_donepending.Designer.cs">
       <DependentUpon>201706100011440_donepending.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706100049520_images.cs" />
+    <Compile Include="Migrations\201706100049520_images.Designer.cs">
+      <DependentUpon>201706100049520_images.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Airport.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706100011440_donepending.resx">
       <DependentUpon>201706100011440_donepending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100049520_images.resx">
+      <DependentUpon>201706100049520_images.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
