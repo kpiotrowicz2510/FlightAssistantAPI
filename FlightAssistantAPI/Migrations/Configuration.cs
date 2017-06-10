@@ -62,7 +62,7 @@ new Models.Airport() { ID = 3, ShortName = "BER", FullName = "Berlin Airport", H
                     Type = Models.FlightEventType.Boarding,
                     Planned = DateTime.Now.AddHours(1.5),
                     DelayTime = DateTime.Now.AddHours(1.5),
-                    BoardingGate = 10
+                    BoardingGate = 4
                 },
                 new Models.FlightEvent()
                 {
