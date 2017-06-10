@@ -21,7 +21,7 @@ namespace FlightAssistantAPI.Models
                 switch (Type)
                 {
                     case FlightEventType.Boarding:
-                        return "Boarding at GATE " + BoardingGate;
+                        return "O nie, to spermiarz!";
                     case FlightEventType.CheckInOnline:
                         return "Checkin online";
                     case FlightEventType.CheckInOffline:
