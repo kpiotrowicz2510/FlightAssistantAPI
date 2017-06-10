@@ -47,5 +47,40 @@ namespace FlightAssistantAPI.Models
         public byte[] MapImage { get; set; }
 
         public int? BoardingGate { get; set; }
+
+        //IsDone.isactive,ispending
+
+        public bool IsDone { get
+            {
+                if(DelayTime < DateTime.Now)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool IsActive
+        {
+            get;set;
+        }
+
+        public bool IsPending
+        {
+            get
+            {
+                if (DelayTime > DateTime.Now)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

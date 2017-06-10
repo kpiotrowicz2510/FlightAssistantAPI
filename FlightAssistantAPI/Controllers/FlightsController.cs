@@ -20,6 +20,14 @@ namespace FlightAssistantAPI.Controllers
                 var flightData = db.Flights.Include("StartAirport").Include("EndAirport").Include("Events").Where(flight => flight.ID == id).First();
                 if (flightData != null)
                 {
+                    for(int i = 1; i < flightData.Events.Count-1; i++)
+                    {
+                        if (flightData.Events[i-1].IsDone&&flightData.Events[i+1].IsPending)
+                        {
+                            flightData.Events[i].IsActive = true;
+                        }
+                        
+                    }
                     return Ok(flightData);
                 }
             }
