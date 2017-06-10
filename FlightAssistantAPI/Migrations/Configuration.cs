@@ -48,39 +48,39 @@ new Models.Airport() { ID = 3, ShortName = "BER", FullName = "Berlin Airport", H
                 new Models.FlightEvent()
                 {
                     Type = Models.FlightEventType.CheckInOnline,
-                    Planned = DateTime.Now.AddDays(1),
-                    DelayTime = DateTime.Now.AddDays(1.1)
+                    Planned = DateTime.Now,
+                    DelayTime = DateTime.Now
                 },
                 new Models.FlightEvent()
                 {
                     Type = Models.FlightEventType.SecurityCheck,
-                    Planned = DateTime.Now.AddDays(1).AddMinutes(30),
-                    DelayTime = DateTime.Now.AddDays(1.1).AddMinutes(30)
+                    Planned = DateTime.Now.AddMinutes(30),
+                    DelayTime = DateTime.Now.AddMinutes(30)
                 },
                 new Models.FlightEvent()
                 {
                     Type = Models.FlightEventType.Boarding,
-                    Planned = DateTime.Now.AddDays(1).AddHours(1.5),
-                    DelayTime = DateTime.Now.AddDays(1.1).AddHours(1.5),
+                    Planned = DateTime.Now.AddHours(1.5),
+                    DelayTime = DateTime.Now.AddHours(1.5),
                     BoardingGate = 10
                 },
                 new Models.FlightEvent()
                 {
                     Type = Models.FlightEventType.FlightStart,
-                    Planned = DateTime.Now.AddDays(1).AddHours(2.5),
-                    DelayTime = DateTime.Now.AddDays(1.1).AddHours(2.5)
+                    Planned = DateTime.Now.AddHours(2.5),
+                    DelayTime = DateTime.Now.AddHours(2.5)
                 },
                 new Models.FlightEvent()
                 {
                     Type = Models.FlightEventType.FlightEnd,
-                    Planned = DateTime.Now.AddDays(1).AddHours(4.5),
-                    DelayTime = DateTime.Now.AddDays(1.1).AddHours(4.5)
+                    Planned = DateTime.Now.AddHours(4.5),
+                    DelayTime = DateTime.Now.AddHours(4.5)
                 },
                 new Models.FlightEvent()
                 {
                     Type = Models.FlightEventType.LuggageRetrival,
-                    Planned = DateTime.Now.AddDays(1).AddHours(5),
-                    DelayTime = DateTime.Now.AddDays(1.1).AddHours(5)
+                    Planned = DateTime.Now.AddHours(5),
+                    DelayTime = DateTime.Now.AddHours(5)
                 }
             };
         }

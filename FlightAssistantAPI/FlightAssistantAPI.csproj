@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201706092156063_luggage.Designer.cs">
       <DependentUpon>201706092156063_luggage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706100011440_donepending.cs" />
+    <Compile Include="Migrations\201706100011440_donepending.Designer.cs">
+      <DependentUpon>201706100011440_donepending.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Airport.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -223,6 +227,11 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\boarding_map.png" />
+    <Content Include="Content\Images\check_in_map.png" />
+    <Content Include="Content\Images\luggage_retrival_map.png" />
+    <Content Include="Content\Images\security_check_map.png" />
+    <Content Include="Content\Images\terminal_map.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -273,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -308,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706092156063_luggage.resx">
       <DependentUpon>201706092156063_luggage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100011440_donepending.resx">
+      <DependentUpon>201706100011440_donepending.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
