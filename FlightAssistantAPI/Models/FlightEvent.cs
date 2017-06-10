@@ -72,7 +72,7 @@ namespace FlightAssistantAPI.Models
         {
             get
             {
-                if (DelayTime > DateTime.Now&&!IsActive)
+                if (DelayTime > DateTime.Now&&!IsActive&&!IsDone)
                 {
                     return true;
                 }
